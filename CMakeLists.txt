@@ -20,13 +20,13 @@ add_service_files(
 
 generate_messages(DEPENDENCIES std_msgs)
 
-if(CATKIN_ENABLE_TESTING)
-  find_package(rostest REQUIRED)
-  set(dynamic_reconfigure_BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-  include(${dynamic_reconfigure_SOURCE_DIR}/cmake/dynamic_reconfigure-macros.cmake)
-  generate_dynamic_reconfigure_options(cfg/Test.cfg)
-  add_subdirectory(test)
-endif()
+#if(CATKIN_ENABLE_TESTING)
+#  find_package(rostest REQUIRED)
+#  set(dynamic_reconfigure_BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+#  include(${dynamic_reconfigure_SOURCE_DIR}/cmake/dynamic_reconfigure-macros.cmake)
+#  generate_dynamic_reconfigure_options(cfg/Test.cfg)
+#  add_subdirectory(test)
+#endif()
 
 catkin_package(LIBRARIES dynamic_reconfigure_config_init_mutex
                INCLUDE_DIRS include
